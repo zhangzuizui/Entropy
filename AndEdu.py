@@ -24,7 +24,7 @@ class AndEdu(object):
     def covariance(self, arrA, arrB):
         
         SUM = 0
-        n = self.shape[1]
+        n = self.shape[0]
         avgA = sum(arrA)/n
         avgB = sum(arrB)/n
         
@@ -73,11 +73,8 @@ class AndEdu(object):
             for i in range(self.shape[0]):
                 f[i][j] = X[i][j] / sum(X[:, [j]].T[0])
         
-        return f
+        return f    
         
-        
-        
-    
     def Entropy(self):
         
         X = self.Frequency()
